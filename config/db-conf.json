@@ -1,7 +1,7 @@
 {
-	"host" : "Ip del Server",
-	"port" : 9999,
-	"user" : "Usuario Postgres",
-	"password" : "clave usaurio",
-	"database" : "Esquema DB"
+	"host" : "172.174.160.121",
+	"port" : 5432,
+	"user" : "g5_19",
+	"password" : "op7wDCVP",
+	"database" : "g5_19"
 }
