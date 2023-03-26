@@ -1,6 +1,6 @@
 'use strict'
 
-var CuentaModel = require('../models/cliente.model'),
+var CuentaModel = require('../models/cuenta.model'),
 CuentaController = () => {}
 
 CuentaController.getAll = (req, res, next) => {
