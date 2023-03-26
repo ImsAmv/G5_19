@@ -5,7 +5,7 @@ var conn = require("../config/db-connection"),
 
     CuentaModel.getAll = (cb) => conn.query("SELECT * FROM CUENTA", cb);
 
-    CuentaModel.getOne = (numero_cuenta ,cb) => conn.query("Select * From CLIENTE where numero_cliente = $1", [numero_cuenta], cb);
+    CuentaModel.getOne = (numero_cuenta ,cb) => conn.query("Select * From Cuenta where numero_cuenta = $1", [numero_cuenta], cb);
 
     CuentaModel.post = (data, cb) => 
     conn.query("call public.P_INSERT_CLIENTE ($1,$2,$3,$4,$5,$6,$7)",
@@ -31,7 +31,7 @@ var conn = require("../config/db-connection"),
         data.tepo_moneda
     ],cb);
 
-    CuentaModel.getOne = (numero_cuenta ,cb) => conn.query("Select * From CLIENTE where numero_cliente = $1", [numero_cuenta], cb);
+    CuentaModel.getOne = (numero_cuenta ,cb) => conn.query("Select * From Cuenta where numero_cuenta = $1", [numero_cuenta], cb);
     CuentaModel.delete = (numero_cuenta ,cb) => conn.query("call public.P_DELETE_CLIENTE ($1)", [numero_cuenta], cb);
 
 module.exports = CuentaModel;

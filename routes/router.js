@@ -18,7 +18,7 @@ var ClienteController = require("../controllers/cliente.controller"),
     express = require("express"),
     router = express.Router();
     router
-      //***CLIENTE RUTA***//
+      //***CLIENTE RUTA***//*
       .get("/cliente/getall", ClienteController.getAll)
       .post("/cliente/getone/:numero_cliente", ClienteController.getOne)
       .post("/cliente/insertar", ClienteController.post)
@@ -31,12 +31,12 @@ var CuentaController = require("../controllers/cuenta.controller"),
     express = require("express"),
     router = express.Router();
     router
-    //***CUENTA RUTA***//
-    .get("/cuenta/getall", ClienteController.getAll)
-    .post("/cuenta/getone/:numero_cuenta", ClienteController.getOne)
-    .post("/cuenta/insertar", ClienteController.post)
-    .put("/cuenta/actualizar/:numero_cuenta", ClienteController.put)
-    .delete("/cuenta/eliminar/:numero_cuenta", ClienteController.delete)
+    //***CUENTA RUTA***//*
+    .get("/cuenta/getall", CuentaController.getAll)
+    .post("/cuenta/getone/:numero_cuenta", CuentaController.getOne)
+    .post("/cuenta/insertar", CuentaController.post)
+    .put("/cuenta/actualizar/:numero_cuenta", CuentaController.put)
+    .delete("/cuenta/eliminar/:numero_cuenta", CuentaController.delete)
     .use(CuentaController.error404);
 
 module.exports = router;
